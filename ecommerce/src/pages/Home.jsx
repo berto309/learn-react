@@ -1,14 +1,18 @@
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Header from '../components/Header';
 import './Home.css';
-import { products } from './../data/products'
 
 const Home = () => {
 
-  axios.get('http://localhost:3000/api/products')
-      .then(response => console.log(response.data))
-      .catch(error => console.log(error))
-      .finally(() => console.log())
+  const [products, setProducts] = useState([])
+  useEffect(() => {
+    axios.get('http://localhost:3000/api/products')
+        .then(response => setProducts(response.data))
+        .catch(error => console.log(error))
+        .finally(() => console.log())
+
+  }, [])
   return (
     <>
       <link rel="icon" href="images/home-favicon.png" />
