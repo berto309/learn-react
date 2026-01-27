@@ -4,6 +4,7 @@ import Header from '../components/Header'
 const Orders = () => {
   return (
     <>
+      <link rel="icon"  href="images/orders-favicon.png" />
       <title>Orders</title>
       <Header />
 
