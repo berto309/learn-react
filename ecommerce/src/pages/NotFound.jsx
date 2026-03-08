@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import './Home.css';
+import './home/Home.css';
 
 const NotFound = () => {
   return (

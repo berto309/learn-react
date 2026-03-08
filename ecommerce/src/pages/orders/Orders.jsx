@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useState } from 'react'
 import axios from 'axios'
 import './orders.css'
-import Header from '../components/Header'
+import { NavLink } from 'react-router'
+import Header from '../../components/Header'
 import dayjs from 'dayjs'
-import { formatMoney } from '../utils/money'
+import { formatMoney } from '../../utils/money'
 const Orders = ({ cart }) => {
 
   const [orders, setOrders] = useState([])
@@ -72,11 +73,11 @@ const Orders = ({ cart }) => {
                         </div>
 
                         <div className="product-actions">
-                          <a href="/tracking">
+                          <NavLink to="/tracking">
                             <button className="track-package-button button-secondary">
                               Track package
                             </button>
-                          </a>
+                          </NavLink>
                         </div>
                       </Fragment>
                     )
