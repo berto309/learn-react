@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Header from '../../components/Header';
 import './Home.css';
-import ProductGrid from '../ProductGrid';
+import ProductGrid from './ProductGrid';
 
-const Home = ({ cart }) => {
+const Home = ({ cart, loadCart }) => {
 
   const [products, setProducts] = useState([])
 
@@ -26,7 +26,7 @@ const Home = ({ cart }) => {
       <Header cart={cart} />
 
       <div className="home-page">
-        <ProductGrid products={products} />
+        <ProductGrid products={products} loadCart={loadCart} />
       </div>
     </>
   )
